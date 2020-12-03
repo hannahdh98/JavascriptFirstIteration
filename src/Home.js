@@ -1,0 +1,39 @@
+import React from 'react';
+import {Cards, LineChartExample} from './components';
+import styles from './App.module.css';
+import {fetchData} from './api';
+import logo from './images/image.png';
+import AlertBox from './components/ui/AlertBox';
+
+class Home extends React.Component {
+
+
+  state = {
+    data: {},
+    
+}
+
+
+  // gets data from api
+  async componentDidMount () {
+    const data = await fetchData();
+    this.setState({data});
+}
+
+
+
+
+  render() {
+      const { data } = this.state;
+      return (
+          <div className={styles.container}>
+            <img src={logo} alt="logo"/>
+              <Cards data={data}/>
+              <LineChartExample/>
+              <AlertBox/>
+          </div>
+      )
+  }
+}
+
+export default Home;
