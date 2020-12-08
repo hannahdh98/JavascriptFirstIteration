@@ -3,7 +3,7 @@
 #this will install the node modules for this project
 3. run npm start
 #this will start the project and open it in your preferred browser
-
+ API is from https://covidtracking.com/data/api 
 
 
 
