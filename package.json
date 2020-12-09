@@ -1,5 +1,7 @@
 {
-  "name": "client",
+  "author":"Hannah Hitchcock",
+  "description":"Javascript final project",
+  "name": "cient",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
