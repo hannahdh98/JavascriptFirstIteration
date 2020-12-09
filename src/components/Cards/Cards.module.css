@@ -1,4 +1,4 @@
-/*.container {
+.container {
     margin: 50px 0;
 
 }
@@ -20,7 +20,7 @@
 .death {
     border-bottom: 10px solid rgba(255, 0, 0, 1) ;
     background: linear-gradient(tomato, tomato);
-}*/
+}
 .container {
     margin: 50px 0px;
   }
