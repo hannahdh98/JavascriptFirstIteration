@@ -39,7 +39,7 @@ export default function AlertBox({ children }) {
           }
         >
           {children}
-         COVID-19 is a quickly changing situation and the data is just a snapshot utilizing the currently available numbers.
+         COVID-19 is a quickly changing situation and the data below is utilizing the currently available numbers from March 2020 to present.
         </Alert>
       </Collapse>
     </div>
