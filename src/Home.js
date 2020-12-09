@@ -27,10 +27,11 @@ class Home extends React.Component {
       const { data } = this.state;
       return (
           <div className={styles.container}>
+        <AlertBox/>
             <img src={logo} alt="logo"/>
               <Cards data={data}/>
               <LineChartExample/>
-              <AlertBox/>
+              
           </div>
       )
   }
