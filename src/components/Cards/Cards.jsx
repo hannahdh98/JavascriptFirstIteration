@@ -1,24 +1,18 @@
 import React from 'react';
 import {Card, CardContent, Typography, Grid} from '@material-ui/core';
 import styles from './Cards.module.css';
-//import CountUp from 'react-countup';
 import cx from 'classnames';
 
+//this will show the cards with the api
 const Cards = ({data: {positive, recovered, death, date}}) => {
 
     if (!positive) {
         return 'Loading...';
     }
     console.log (positive);
-    
-    
-    
-    
-
 
     return (
 
-        
 
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
@@ -34,8 +28,8 @@ const Cards = ({data: {positive, recovered, death, date}}) => {
                                {positive}
                            
                         </Typography>
-                        <Typography color="textSecondary">{date}</Typography>
-                        <Typography variant="body2">Active cases of covid</Typography>
+                        <Typography color="textSecondary">{new Date().toDateString(date)}</Typography>
+                        <Typography variant="body2">Active cases of Covid-19 Since March.</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)}>
@@ -44,18 +38,18 @@ const Cards = ({data: {positive, recovered, death, date}}) => {
                             Recovered
                         </Typography>
                         <Typography variant="h5">{recovered}</Typography>
-                        <Typography color="textSecondary">{date}</Typography>
-                        <Typography variant="body2">Num of recoveries from covid</Typography>
+                        <Typography color="textSecondary">{new Date().toDateString(date)}</Typography>
+                        <Typography variant="body2">Number of recoveries from Covid-19</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.death)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
-                            Death
+                            Deaths
                         </Typography>
     <Typography variant="h5">{death}</Typography>
-    <Typography color="textSecondary">{date}</Typography>
-                        <Typography variant="body2">Num of deaths from covid</Typography>
+    <Typography color="textSecondary">{new Date().toDateString(date)}</Typography>
+                        <Typography variant="body2">Number of deaths from Covid-19</Typography>
                     </CardContent>
                 </Grid>
             </Grid>
